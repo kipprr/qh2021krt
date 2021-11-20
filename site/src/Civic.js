@@ -7,11 +7,15 @@ const Civic = (props) => {
 const [state, setState] = React.useState({});
 
 useEffect(() => {
-    fetch("https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyAPKTEEdStE-z9j7FIM2B_pv0KMQVdh7Hk&address=1263%20Pacific%20Ave.%20Kansas%20City%20KS")
+    var address = "263%20Pacific%20Ave.%20Kansas%20City%20KS" //placeholder but we need to get address from props
+    var url = "https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyAPKTEEdStE-z9j7FIM2B_pv0KMQVdh7Hk&address="+address+"&levels=country&roles=legislatorUpperBody"
+    fetch(url)
       .then(res => res.json())
       .then(
         (result) => {
-          console.log(result)
+          for (let i = 0; i<result.officials.length; i++){
+              console.log("Senator " + result.officials[i].name)
+          }
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
