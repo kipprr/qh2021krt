@@ -2,6 +2,7 @@ import React from 'react';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import shp from 'shpjs';
+import Civic from '../civicapi/Civic'
 
 const ShapeFile = ({ zipUrl }) => {
     const map = useMap();
@@ -16,7 +17,7 @@ const ShapeFile = ({ zipUrl }) => {
                             out.push(f.properties[key])
                         }
                         // This is the popup
-                        l.bindPopup(`${out.join('<br/>')}`);
+                        l.bindPopup(`${<Civic sid={out[0]} did={out[1]} />}`);
                     }
                 }
             }

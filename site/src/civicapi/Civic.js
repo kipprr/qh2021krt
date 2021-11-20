@@ -3,7 +3,7 @@ import React from 'react';
 import { useEffect } from 'react';
   
 
-const Civic = (props) => {
+const Civic = ({sid,did}) => {
 const [state, setState] = React.useState({});
 
 useEffect(() => {
@@ -62,8 +62,8 @@ useEffect(() => {
     55:"wi",
     54:"wv",
     56:"wy"}
-    var state = states[37] //placeholder but we need to get state number from props
-    var district = 3 //placeholder but we need to get district number from props
+    var state = states[sid] //placeholder but we need to get state number from props
+    var district = did //placeholder but we need to get district number from props
     var senatorDivision = "ocd-division%2Fcountry%3Aus%2Fstate%3A"+state
     var houseDivision = senatorDivision + "%2Fcd%3A"+ district
     var senatorURL = "https://www.googleapis.com/civicinfo/v2/representatives/"+senatorDivision+"?key=AIzaSyAPKTEEdStE-z9j7FIM2B_pv0KMQVdh7Hk&levels=country&roles=legislatorUpperBody"
