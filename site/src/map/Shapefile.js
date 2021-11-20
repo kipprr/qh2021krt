@@ -2,6 +2,7 @@ import React from 'react';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import shp from 'shpjs';
+import './map.css';
 
 const ShapeFile = ({ zipUrl }) => {
     const map = useMap();
