@@ -3,6 +3,7 @@ import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import shp from 'shpjs';
 import Civic from '../civicapi/Civic'
+import './map.css';
 
 const ShapeFile = ({ zipUrl }) => {
     const map = useMap();
