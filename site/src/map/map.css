@@ -1,11 +1,68 @@
+/* Let's use all the colors! - Lulu, League of Legends */
 .leaflet-interactive {
-    fill: rgb(51, 136, 255, 0.2);
+    fill: rgba(255, 51, 85, 0.75);
     transition: fill 250ms ease-in-out;
-    stroke-width: 1.5;
+    stroke-width: 0.5;
+    stroke: rgb(255, 51, 85);
 }
 
+.leaflet-interactive:nth-of-type(6n+1) {
+    fill: rgba(255, 153, 0, 0.75);
+    transition: fill 250ms ease-in-out;
+    stroke-width: 0.5;
+    stroke: rgb(255, 153, 0);
+}
+
+.leaflet-interactive:nth-of-type(6n+2) {
+    fill: rgba(255, 196, 0, 0.75);
+    transition: fill 250ms ease-in-out;
+    stroke-width: 0.5;
+    stroke: rgb(255, 196, 0);
+}
+
+.leaflet-interactive:nth-of-type(6n+3) {
+    fill: rgba(29, 218, 86, 0.75);
+    transition: fill 250ms ease-in-out;
+    stroke-width: 0.5;
+    stroke: rgb(29, 218, 86);
+}
+
+.leaflet-interactive:nth-of-type(6n+4) {
+    fill: rgba(51, 180, 255, 0.75);
+    transition: fill 250ms ease-in-out;
+    stroke-width: 0.5;
+    stroke: rgb(51, 180, 255);
+}
+
+.leaflet-interactive:nth-of-type(6n+5) {
+    fill: rgba(247, 0, 255, 0.75);
+    transition: fill 250ms ease-in-out;
+    stroke-width: 0.5;
+    stroke: rgb(247, 0, 255);
+}
+ 
 .leaflet-interactive:hover {
-    fill: rgb(20, 118, 255);
+    fill: rgb(255, 0, 0);
+}
+
+.leaflet-interactive:nth-of-type(6n+1):hover {
+    fill: rgb(255, 153, 0);
+}
+
+.leaflet-interactive:nth-of-type(6n+2):hover {
+    fill: rgb(224, 172, 0)
+}
+
+.leaflet-interactive:nth-of-type(6n+3):hover {
+    fill: rgb(0, 197, 60);
+}
+
+.leaflet-interactive:nth-of-type(6n+4):hover {
+    fill: rgb(12, 166, 255);
+}
+
+.leaflet-interactive:nth-of-type(6n+5):hover {
+    fill: rgb(255, 0, 255)
 }
 
 .phone {
