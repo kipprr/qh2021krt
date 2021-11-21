@@ -6,3 +6,15 @@
   align-items: center;
   width: 100%;
 }
+
+h2 { color: #333333; padding-top: 50px; font-family: 'Bitter', serif; font-size: 50px; font-weight: normal; line-height: 54px; margin: 0 0 54px; }
+
+
+p { color: #333333; font-family: Georgia, serif; font-size: 18px; line-height: 28px; margin: 0 0 28px; }
+
+.para {
+  padding-top: 50px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}

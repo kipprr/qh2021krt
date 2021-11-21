@@ -9,8 +9,8 @@ function App() {
         <h2>Contact Congress</h2>
       </div>
       <Map/>
-      <div>
-
+      <div class="para">
+      <p>Being politically informed starts with knowing more about your representatives in congress. Use our tool to access the website and contact information for your representatives. It's on us to keep our representatives accountable! </p>
       </div>
     </div>
   );
