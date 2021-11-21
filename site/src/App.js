@@ -6,9 +6,12 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h2>Representative Finder</h2>
+        <h2>Contact Congress</h2>
       </div>
       <Map/>
+      <div>
+
+      </div>
     </div>
   );
 }
