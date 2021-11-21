@@ -38,6 +38,8 @@ const ShapeFile = ({ zipUrl }) => {
                                 return res.json();
                             })
 
+                            console.log(data);
+
                             // Don't want the app crashing on us
                             if (data.error) {
                                 l.bindPopup("No data available").openPopup();
@@ -50,7 +52,10 @@ const ShapeFile = ({ zipUrl }) => {
                             } else {
                                 rep = data.officials[0];
                             }
-                            l.bindPopup(ReactDOMServer.renderToString(buildData(`${rep.name} (${rep.party.charAt(0)})`, rep.urls[0], `${STATES[state].toUpperCase()} ${out[3]}`))).openPopup()
+
+                            let site = (rep.urls) ? rep.urls[0] : undefined
+
+                            l.bindPopup(ReactDOMServer.renderToString(buildData(`${rep.name} (${rep.party.charAt(0)})`, site, rep.phones[0], `${STATES[state].toUpperCase()} ${out[3]}`))).openPopup()
                         }
                     })
                 }
@@ -62,15 +67,38 @@ const ShapeFile = ({ zipUrl }) => {
     return null;
 }
 
-const buildData = (name, url, district) => {
-    return (
-        <div>
-            <h3>{district}</h3>
-            <a href={url} target="_blank" rel="noreferrer">
-                {name}
-            </a>
-        </div>
-    );
+const buildData = (name, url, phone, district) => {
+    if (url) {
+        return (
+            <div>
+                <h3>{district}</h3>
+                <a href={url} target="_blank" rel="noreferrer">
+                    {name}
+                </a>
+                <div className="phone">
+                    <i className="fas fa-phone-alt"></i>
+                    <div className="phone-number">
+                        {phone}
+                    </div>   
+                </div>
+            </div>
+        );
+    } else {
+        return (
+            <div>
+                <h3>{district}</h3>
+                <p>
+                    {name}
+                </p>
+                <div className="phone">
+                    <i className="fas fa-phone-alt"></i>
+                    <div className="phone-number">
+                        {phone}
+                    </div>    
+                </div>
+            </div>
+        );
+    }
 }
 
 export default ShapeFile;

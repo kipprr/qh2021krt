@@ -7,3 +7,14 @@
 .leaflet-interactive:hover {
     fill: rgb(20, 118, 255);
 }
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.phone > svg {
+    padding-top: 2px;
+    margin-right: 10px;
+}
