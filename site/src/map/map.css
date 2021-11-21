@@ -1,5 +1,5 @@
 .leaflet-interactive {
-    fill: rgb(51, 136, 255, 0.8);
+    fill: rgb(51, 136, 255, 0.2);
     transition: fill 250ms ease-in-out;
     stroke-width: 1.5;
 }
