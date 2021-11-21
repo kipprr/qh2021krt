@@ -20,8 +20,8 @@ const Map = () => {
             center={position}
             zoom={4}
             style={{
-                width: '100%',
-                height: '80vh'
+                width: '90%',
+                height: '60vh'
             }}
             whenCreated={(instance) => {mapRef.current = instance}}
         >
