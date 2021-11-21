@@ -44,7 +44,7 @@ const ShapeFile = ({ zipUrl }) => {
                             } else {
                                 rep = data.officials[0];
                             }
-                            l.bindPopup(ReactDOMServer.renderToString(buildData(rep.name, rep.urls[0], out[3]))).openPopup()
+                            l.bindPopup(ReactDOMServer.renderToString(buildData(`${rep.name} (${rep.party.charAt(0)})`, rep.urls[0], out[3]))).openPopup()
                         }
                     })
                 }
@@ -59,7 +59,7 @@ const ShapeFile = ({ zipUrl }) => {
 const buildData = (name, url, district) => {
     return (
         <div>
-            <h6>{district}</h6>
+            <h3>{district}</h3>
             <a href={url} target="_blank">
                 {name}
             </a>
