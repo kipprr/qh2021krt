@@ -66,7 +66,7 @@ const buildData = (name, url, district) => {
     return (
         <div>
             <h3>{district}</h3>
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" rel="noreferrer">
                 {name}
             </a>
         </div>
