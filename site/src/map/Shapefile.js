@@ -37,7 +37,13 @@ const ShapeFile = ({ zipUrl }) => {
                             .then(res => {
                                 return res.json();
                             })
-                            console.log(data);
+
+                            // Don't want the app crashing on us
+                            if (data.error) {
+                                l.bindPopup("No data available").openPopup();
+                                return;
+                            }
+
                             let rep;
                             if (out[3].includes("at Large")) {
                                 rep = data.officials[2];

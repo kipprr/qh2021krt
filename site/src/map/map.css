@@ -1,8 +1,9 @@
 .leaflet-interactive {
-    fill: rgb(51, 136, 255, 0.5);
+    fill: rgb(51, 136, 255, 0.8);
     transition: fill 250ms ease-in-out;
+    stroke-width: 1.5;
 }
 
 .leaflet-interactive:hover {
-    fill: rgba(51, 136, 255, 1);
+    fill: rgb(20, 118, 255);
 }
